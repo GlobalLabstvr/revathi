@@ -4,11 +4,6 @@
   </div>
   <br>
 <div class="col-md-7">
-<app-receipe-detail
-*ngIf="selectedReceipe; else infoText"
-[receipe]="selectedReceipe"></app-receipe-detail>
-<ng-template #infoText>
-  <p>please select a receipe!</p>
-</ng-template>
+<router-outlet></router-outlet>
 </div>
 </div>

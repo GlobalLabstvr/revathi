@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
       <img [src]="receipe.imagePath" alt="{{ receipe.name }}" class="img-responsive"
-      style="max-height:100px">
+      style="max-height:50px">
     </div>
   </div>
   <div class="row">
@@ -18,10 +18,10 @@
           class="btn btn-primary dropdown-toggle">
           Manage Receipe <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
+        <ul>
           <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a></li>
           <li><a style="cursor: pointer;" (click)="onEditReceipe()">Edit Recipe</a></li>
-          <li><a style="cursor: pointer;">Delete Receipe</a></li>
+          <li><a style="cursor: pointer;"(click)="onDeleteReceipe()">Delete Receipe</a></li>
         </ul>
       </div>
     </div>

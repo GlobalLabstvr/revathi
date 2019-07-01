@@ -1,0 +1,4 @@
+input.ng-invalid.ng-toughed,
+textarea.ng-invalid.ng-toughed {
+    border: 1px solid red;
+}

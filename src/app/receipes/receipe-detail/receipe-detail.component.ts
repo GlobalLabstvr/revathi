@@ -32,6 +32,10 @@ id:number;
 
   onEditReceipe() {
   this.router.navigate(['edit'], { relativeTo: this.route});
- // this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route});
+  //this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route});
+  }
+  onDeleteReceipe() {
+    this.receipeService.deleteReceipe(this.id);
+    this.router.navigate(['/receipes']);
   }
 }

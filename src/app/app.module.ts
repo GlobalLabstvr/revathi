@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 import { ReceipeStartComponent } from './receipes/receipe-start/receipe-start.component';
 import { ReceipeEditComponent } from './receipes/receipe-edit/receipe-edit.component';
+import { ReceipeService } from './receipes/receipe.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,11 @@ import { ReceipeEditComponent } from './receipes/receipe-edit/receipe-edit.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService,ReceipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
